@@ -1,0 +1,12 @@
+{
+    "addons": {
+      "queryamoid@kaply.com": {
+        "updates": [
+          {
+            "version": "0.1",
+            "update_link": "https://github.com/mkaply/queryamoid/releases/download/0.1/queryamoid-0.1.xpi"
+          }
+        ]
+      }
+    }
+  }

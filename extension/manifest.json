@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Query AMO Addon ID",
+  "version": "0.1",
+  "browser_action": {
+    "default_title": "Click here",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["tabs"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "queryamoid@kaply.com",
+      "update_url": "https://raw.githubusercontent.com/mkaply/queryamoid/main/updates.json"
+    }
+  }
+}

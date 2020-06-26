@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        #message {
+            display: none;
+        }
+        #clipboard {
+            position: absolute;
+            left: 0;
+            top:0;
+            opacity: 0;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="message"></div>
+    <div id="addon">
+      <div>
+        <span id="guid"></span><button id="copy_guid">Copy</button>
+      </div>
+      <div>
+        <span id="url"></span><button id="copy_url">Copy</button>
+      </div>
+      <input type="text" id="clipboard">
+    </div>
+  </body>
+  <script src="popup.js"></script>
+</html>

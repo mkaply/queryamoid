@@ -3,8 +3,8 @@
       "queryamoid@kaply.com": {
         "updates": [
           {
-            "version": "0.1",
-            "update_link": "https://github.com/mkaply/queryamoid/releases/download/v0.1/query_amo_addon_id-0.1-fx.xpi"
+            "version": "0.2",
+            "update_link": "https://github.com/mkaply/queryamoid/releases/download/v0.2/query_amo_addon_id-0.2-fx.xpi"
           }
         ]
       }

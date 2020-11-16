@@ -3,8 +3,8 @@ browser.tabs.query({
   lastFocusedWindow: true
 }).then(function(tabs) {
 let url = new URL(tabs[0].url);
-if (url.host != "addons.mozilla.org") {
-  showMessage("This extension only works on addons.mozilla.org.");
+if ((url.host != "addons.mozilla.org") && (url.host != "addons.thunderbird.net")) {
+  showMessage("This extension only works on addons.mozilla.org or addons.thunderbird.net.");
   return;
 }
 let splitPath = url.pathname.split("/");
@@ -13,13 +13,13 @@ if (splitPath[3] != "addon") {
   return;
 }
 let slug = splitPath[4];
-fetch(`https://addons.mozilla.org/api/v4/addons/addon/${slug}/`)
+fetch(`https://${url.host}/api/v4/addons/addon/${slug}/`)
 .then((response) => {
   return response.json();
 })
 .then((data) => {
   document.getElementById("guid").textContent = data.guid;
-  document.getElementById("url").textContent =  `https://addons.mozilla.org/firefox/downloads/latest/${slug}/latest.xpi`;
+  document.getElementById("url").textContent =  `https://${url.host}/firefox/downloads/latest/${slug}/latest.xpi`;
 });})
 
 document.getElementById("copy_guid").addEventListener("click", function() {
